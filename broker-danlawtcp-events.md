@@ -92,11 +92,3 @@ in non-OBD mode produce a Trip End event when GPS position is relatively static.
 - [Trip End Absolute Time](danlawtcp-events/trip-end.md#trip-end-absolute-time)
 - [Trip End Absolute Time and GPS](danlawtcp-events/trip-end.md#trip-end-absolute-time-gps)
 
-#### Device Communication
-
-Device Communication events are exclusive to the TCP protocol, and typically
-consist of responses to platform commands.
-
-- [Device Connected](danlawtcp-events/communication.md#device-connected)
-- [Data Upload Completed](danlawtcp-events/communication.md#data-upload-completed)
-- [Update Command Confirmed](danlawtcp-events/communication.md#update-command-confirmed)
