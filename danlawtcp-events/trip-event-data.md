@@ -349,13 +349,14 @@ The `ObdSpeedEvent` type has a number of subtypes.
       - [`TripSpeedMetrics`](trip-event-data.md#trip-speed-metrics)
       - [`TripBatteryMetrics`](trip-event-data.md#trip-battery-metrics)
 
+
 ### <a name="acceleration"></a> Acceleration
 
 An acceleration event is generated if the vehicle's acceleration is greater than
-or equal to the device's configured `maxAcceleration` value and the vehicle's
-speed is greater than or equal to the configured `thresholdValue`. The
+or equal to the device's configured `thresholdValue`. The
 acceleration event ends when the vehicle's acceleration falls below the
-configured `maxAcceleration` value.
+configured `thresholdValue`.
+
 
 #### Attributes
 
@@ -388,10 +389,10 @@ configured `maxAcceleration` value.
 ### <a name="acceleration-accelerometer-confirmation"></a> Acceleration with Accelerometer Confirmation
 
 An acceleration event is generated if the vehicle's acceleration is greater than
-or equal to the device's configured `maxAcceleration` value and the vehicle's
-speed is greater than or equal to the configured `thresholdValue`. The
+or equal to the device's configured `thresholdValue`. The
 acceleration event ends when the vehicle's acceleration falls below the
-configured `maxAcceleration` value.
+configured `thresholdValue`. This event differs from the Acceleration Event only
+in the type, which says that the device's accelerometer has confirmed its veracity. 
 
 The difference between this type and the type above is the confirmation of the device's accelerometer sensor.
 
@@ -425,9 +426,8 @@ The difference between this type and the type above is the confirmation of the d
 ### <a name="braking"></a> Braking
 
 A braking event is generated if the vehicle's deceleration is greater than or
-equal to the device's configured `maxBraking` value and the vehicle speed is
-greater than or equal to the configured `thresholdValue`. The braking event ends
-when the vehicle's deceleration falls below the configured `maxBraking` value.
+equal to the device's configured `thresholdValue`. The braking event ends
+when the vehicle's deceleration falls below the configured `thresholdValue`.
 
 #### Attributes
 
@@ -449,7 +449,7 @@ when the vehicle's deceleration falls below the configured `maxBraking` value.
       "type": "ObdSpeedEvent",
       "obdSpeedEventData": {
         "thresholdValue": 8.0,
-        "maxAcceleration": 6.0,
+        "maxBraking": 6.0,
         "type": "Braking"
       }
     }
@@ -460,10 +460,9 @@ when the vehicle's deceleration falls below the configured `maxBraking` value.
 ### <a name="braking-accelerometer-confirmation"></a> Braking with Accelerometer Confirmation
 
 A braking event is generated if the vehicle's deceleration is greater than or
-equal to the device's configured `maxValue` value, the vehicle speed is
-greater than or equal to the configured `thresholdValue`, and the accelerometer
-confirms the vehicles rate of deceleration. The braking event ends when the
-vehicle's deceleration falls below the configured `maxValue` value.
+equal to the device's configured `thresholdValue`. The braking event ends
+when the vehicle's deceleration falls below the configured `thresholdValue`. This event differs from the Braking Event only
+in the type, which says that the device's accelerometer has confirmed its veracity. 
 
 The difference between this type and the type above is the confirmation of the device's accelerometer sensor.
 
@@ -486,7 +485,7 @@ The difference between this type and the type above is the confirmation of the d
       "type": "ObdSpeedEvent",
       "obdSpeedEventData": {
         "thresholdValue": 25.0,
-        "maxAcceleration": 6.0,
+        "maxValue": 6.0,
         "type": "BrakingWithAccelerationConfirmation"
       }
     }
