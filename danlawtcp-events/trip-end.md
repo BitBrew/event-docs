@@ -52,7 +52,7 @@ Currently unavailable
     - Members
       - `true` - The odometer value reported above was read from the vehicle.
       - `false` - The odometer value reported above came from the device. This is the expected value for a `TripEnd` event.
-- type: `TripEndAbsoluteTimeAndGps` (enum[string]) - Indicates a type for this event.
+- type: `TripEndRecordAbsoluteTimeAndGps` (enum[string]) - Indicates a type for this event.
 - tripNumber: `39` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
 
 
