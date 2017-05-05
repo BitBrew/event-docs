@@ -32,7 +32,7 @@ all connected vehicle devices should provide. We call this common set of events
 the "Core Events." Other types of events are considered "Broker Specific
 Events."
 
-## Event Header
+## <a href="platform-header">Event Header</a>
 
 All platform events contain a header that contains metadata. The event header
 contains a device identifier, broker type, tenant name, message
@@ -48,7 +48,7 @@ to help route and correlate events using rules and application logic.
 
 ### Example Event Header
 
-The following is an example of an event header.
+The following is an example of a platform event header.
 
 ```json
 {
