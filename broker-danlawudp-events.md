@@ -47,7 +47,7 @@ Events sent over the UDP protocol therefore contain two headers: the platform-ap
 The name of this broker type is `DanlawUdp`.
 
 ### Event Header
-This header—its format and fields—is specific to the UDP protocol, and is not the same as the [platform-appended header](events-overview.md#platform-header) which appears on every event regardless of protocol.
+This header—its format and fields—is specific to the UDP protocol, and is not the same as the [platform-appended header](README.md#platform-header) which appears on every event regardless of protocol.
 
 #### Attributes
 
