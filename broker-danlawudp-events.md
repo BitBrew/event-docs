@@ -38,7 +38,7 @@ vehicle. Messages produce platform events.
 | Message Body           | Contains the data for this message type      |
 | Message Footer         | Contains a checksum for the message contents |
 
-Events sent over the UDP protocol therefore contain two headers: the platform-appended header discussed [here](events-overview.md#platform-header) and the header referenced in the table above.
+Events sent over the UDP protocol therefore contain two headers: the [platform-appended header](events-overview.md#platform-header) and the protocol-specific header referenced in the table above (example below).
 
 ## Events
 
