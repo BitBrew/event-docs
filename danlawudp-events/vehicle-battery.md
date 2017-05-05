@@ -49,7 +49,7 @@
     - messageType: `10` (number) - 
     - odo: `22` (number) - Vehicle odometer or device-calculated odometer.
     - tripNumber: `23`- A sequential number that increases after each trip. Resets after 65,536 trips.
-    - fixQuality: `FixInvalid` (enum[string]) - The validity and accuracy of the GPS data.
+    - fixQuality: `FixOk` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
         - `StoredFix` - Latitude and longitude are readings from (up to) 5 seconds ago, because the device has not been able to get a GPS fix for 5 seconds.
@@ -82,7 +82,7 @@
       "messageType": 7,
       "odo": 0,
       "tripNumber": 3,
-      "fixQuality": "FixInvalid",
+      "fixQuality": "FixOk",
       "messageLength": 11,
     },
     "isError": false
