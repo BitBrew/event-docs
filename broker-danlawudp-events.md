@@ -34,8 +34,8 @@ vehicle. Messages produce platform events.
 
 | Message Component      | Description                                  |
 | ---------------------- | -------------------------------------------- |
-| Message Header         | Contains message type, time, location, etc.  |
-| Message Body           | Contains the data for this message type      |
+| Message Header         | Contains metadata about the message: time, location, etc.  |
+| Message Body           | Contains the contents of the message      |
 | Message Footer         | Contains a checksum for the message contents |
 
 Events sent over the UDP protocol therefore contain two headers: the [platform-appended header](README.md#event-header) and the protocol-specific header referenced in the table above (example below).
@@ -54,7 +54,7 @@ This header—its format and fields—is specific to the UDP protocol, and is no
 - header (object)
   - timestamp: `2016-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
   - latitude: `42.2793934` (number)
-  - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
+  - tripType: `Trip`(enum[string]) - Indicates a contextual type for the event.
     - Members
       - `IgnitionOff`
       - `Trip`
@@ -90,10 +90,10 @@ This header—its format and fields—is specific to the UDP protocol, and is no
 ```
     "header": {
       "timestamp": "2016-02-05T10:36:31-05:00",
-      "latitude": 0.0,
+      "latitude": 42.2793934,
       "tripType": "Trip",
       "vehicleProtocolId": "ISO15765_11_BIT_CAN",
-      "longitude": 0.0,
+      "longitude": -83.72955975,
       "messageType": 10,
       "odo": 22,
       "tripNumber": 23,
