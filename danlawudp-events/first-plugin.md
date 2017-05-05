@@ -36,7 +36,7 @@
     - longitude: `-83.72955975` (number)
     - messageType: `40` (number) - 
     - odo: `22` (number) - Vehicle odometer or device-calculated odometer.
-    - tripNumber: `23`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - tripNumber: `0`- A sequential number that increases after each trip. Resets after 65,536 trips.
     - fixQuality: `FixInvalid` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
@@ -62,14 +62,14 @@
     },
     "header": {
       "timestamp": "2016-10-03T15:37:32-04:00",
-      "latitude": 0,
+      "latitude": 42.2793934,
       "tripType": "Trip",
       "vehicleProtocolId": "ISO15765_11_BIT_CAN",
-      "longitude": 0,
+      "longitude": -83.72955975,
       "messageType": 40,
       "odo": 0,
       "tripNumber": 0,
-      "fixQuality": "FixInvalid",
+      "fixQuality": "FixOk",
       "messageLength": 40
     },
     "isError": false
