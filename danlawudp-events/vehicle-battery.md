@@ -3,7 +3,7 @@
 ## Properties
 
 - body (object)
-  - footer: `90` (number) - 
+  - footer: `90` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - value: `5.538384437561035` (number)
     - eventCount: `1` (number) - The number of times this event occurred during the trip.
