@@ -5,9 +5,9 @@
 - body (object)
   - footer: `152` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
-    - firmwareVersion: `07.2E` (string) -
+    - firmwareVersion: `07.2E` (string) - The name of the firmware file that the device is running.
     - odometerValue: `0` (number) - Vehicle odometer or device-calculated odometer (see `additionalInfo` for differentiator).
-    - configVersion: `072E.1` (string) - 
+    - configVersion: `072E.1` (string) - The name of the configuration file that the device is running.
     - vin: `1F1G05GV2B1049415` - Vehicle Identification Number provided by the vehicle. Empty string when VIN is unavailable.
     - additionalInfo: `VehicleOdometer` (enum[string]) - Indicates whether the `odometerValue` is read from the vehicle or the device.
     - type: `FirstPluginEvent` (string) - Indicates a type for this event.
