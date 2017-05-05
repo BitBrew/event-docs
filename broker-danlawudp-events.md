@@ -38,7 +38,7 @@ vehicle. Messages produce platform events.
 | Message Body           | Contains the data for this message type      |
 | Message Footer         | Contains a checksum for the message contents |
 
-Events sent over the UDP protocol therefore contain two headers: the [platform-appended header](events-overview.md#event-header) and the protocol-specific header referenced in the table above (example below).
+Events sent over the UDP protocol therefore contain two headers: the [platform-appended header](README.md#event-header) and the protocol-specific header referenced in the table above (example below).
 
 ## Events
 
@@ -47,7 +47,7 @@ Events sent over the UDP protocol therefore contain two headers: the [platform-a
 The name of this broker type is `DanlawUdp`.
 
 ### Event Header
-This header—its format and fields—is specific to the UDP protocol, and is not the same as the [platform-appended header](README.md#platform-header) which appears on every event regardless of protocol.
+This header—its format and fields—is specific to the UDP protocol, and is not the same as the [platform-appended header](README.md#event-header) which appears on every event regardless of protocol.
 
 #### Attributes
 
