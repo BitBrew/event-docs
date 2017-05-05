@@ -1,6 +1,6 @@
 # First Plugin
 
-## Properties
+## Attributes
 
 - body (object)
   - footer: `152` (number) - Contains a checksum for the message contents.
