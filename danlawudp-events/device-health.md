@@ -5,7 +5,7 @@
   - footer: `102` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `DeviceHealthEvent` (strng) - Indicates a type for this event.
-    - faultGroup: `Information` (enum[string]) -
+    - faultGroup: `Information` (enum[string]) - Assigns a category for the type of fault the device is encountering.
       - `Critical`
       - `Major`
       - `Information`
