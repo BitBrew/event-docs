@@ -10,6 +10,9 @@
     - configVersion: `072E.1` (string) - The name of the configuration file that the device is running.
     - vin: `1F1G05GV2B1049415` - Vehicle Identification Number provided by the vehicle. Empty string when VIN is unavailable.
     - additionalInfo: `VehicleOdometer` (enum[string]) - Indicates whether the `odometerValue` is read from the vehicle or the device.
+      - Members        
+        - `Calculated` - Indicates that the `odometer` value came from the device.
+        - `VehicleOdometer` - Indicates that the `odometer` value was read from the vehicle.
     - type: `FirstPluginEvent` (string) - Indicates a type for this event.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2016-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
