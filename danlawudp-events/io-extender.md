@@ -7,11 +7,11 @@
   - message: (object) - Contains the contents of the event.
     - type: `IoExtenderAnalogDigitalChannelEvent` (string) - Indicates a type for this event.
     - analogChannel0: `0.008813186548650265` (number) - The analog channel output in volts.
-    - analogChannel1: `0.0` (number) - The analog channel output in volts.
-    - analogChannel2: `0.0` (number) - The analog channel output in volts.
-    - analogChannel3: `0.0` (number) - The analog channel output in volts.
-    - analogChannel4: `0.0` (number) - The analog channel output in volts.
-    - analogChannel5: `0.0` (number) - The analog channel output in volts.
+    - analogChannel1: `0.0` (number) - The analog channel input in volts.
+    - analogChannel2: `0.0` (number) - The analog channel intput in volts.
+    - analogChannel3: `0.0` (number) - The analog channel intput in volts.
+    - analogChannel4: `0.0` (number) - The analog channel intput in volts.
+    - analogChannel5: `0.0` (number) - The analog channel intput in volts.
     - isDigitalOutputHigh: `false` (boolean) - Indicates whether the digital output status is high or low.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-03-16T14:29:11-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
