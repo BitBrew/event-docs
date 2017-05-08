@@ -72,7 +72,7 @@
         - `StoredFix` - Latitude and longitude are readings from (up to) 5 seconds ago, because the device has not been able to get a GPS fix for 5 seconds.
         - `FixInvalid` - Latitude and longitude are invalid.
         - `Unknown` - The platform cannot decode the value.
-    - messageLength: `40`(number) - Indicates the total bytes of the message, including the checksum.
+    - messageLength: `40` (number) - Indicates the total bytes of the message, including the checksum.
 ## Example
 
 ```json
