@@ -26,7 +26,7 @@
         - `Trip`
         - `Idling`
         - `Unknown`
-    - tripNumber: `2`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - tripNumber: `2` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
     - messageType: `14` (number) - 
     - messageLength: `32` (number) - Indicates the total bytes of the message, including the checksum.
     - latitude: `42.2891150` (number)
@@ -37,7 +37,7 @@
         - `StoredFix` - Latitude and longitude are readings from (up to) 5 seconds ago, because the device has not been able to get a GPS fix for 5 seconds.
         - `FixInvalid` - Latitude and longitude are invalid.
         - `Unknown` - The platform cannot decode the value.
-    - vehicleProtocolId: `ISO15765_11_BIT_CAN`(enum[string]) - The type of protocol the device detected on the vehicle bus.
+    - vehicleProtocolId: `ISO15765_11_BIT_CAN` (enum[string]) - The type of protocol the device detected on the vehicle bus.
       - Members
         - `NoProtocol` - Would only appear if a vehicle were being towed. 
         - `J1850VPW`
