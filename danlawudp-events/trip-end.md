@@ -18,22 +18,22 @@
     - criticalSpeedDuration: `0` (number) - Time spent in critical speed events during the trip in seconds.
     - tripIdleTime: `586` (number) - Time the engine spent idling during the trip in seconds.
     - cumulativeIdleTime: `39` (number) - Time the engine has been idling since the device was connected in hours.
-    - hardAcclCounts: 0` (number) - Number of hard acceleration events during the trip.
+    - hardAcclCounts: `0` (number) - Number of hard acceleration events during the trip.
     - hardBreakingCounts: `0` (number) - Number of hard braking events during the trip.
     - consumedAir: `11868.81` (number) - Amount of air consumed dduring the trip in grams.
   - header (object) - UDP-specifc object containing meta-data about the event.
-    - timestamp: `2017-08-22T16:08:10-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
+    - timestamp: `2017-01-01T15:21:40-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `IgnitionOff`(enum[string]) - Indicates a contextual type for this event.
       - Members
         - `IgnitionOff`
         - `Trip`
         - `Idling`
         - `Unknown`
-    - tripNumber: `92`- A sequential number that increases after each trip. Resets after 65,536 trips.
-    - messageType: `53` (number) - 
-    - messageLength: `30` (number) - Indicates the total bytes of the message, including the checksum.
-    - latitude: `42.278709411621094` (number)
-    - longitude: `-83.74756622314453` (number)
+    - tripNumber: `485`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - messageType: `9` (number) - 
+    - messageLength: `35` (number) - Indicates the total bytes of the message, including the checksum.
+    - latitude: `42.46466064453125` (number)
+    - longitude: `-83.51720428466797` (number)
     - fixQuality: `FixOk` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
@@ -53,7 +53,7 @@
         - `J1939`
         - `J1708`
         - `Unknown`
-    - odo: `1667` (number) - Vehicle odometer or device-calculated odometer.
+    - odo: `3743` (number) - Vehicle odometer or device-calculated odometer.
 
 ## Example
 
@@ -82,15 +82,15 @@
     },
     "header": {
       "timestamp": "2017-01-01T15:21:40-05:00",
-      "latitude": 41.46466064453125,
       "tripType": "IgnitionOff",
-      "vehicleProtocolId": "ISO15765_11_BIT_CAN",
-      "longitude": -81.51720428466797,
-      "messageType": 9,
-      "odo": 3743,
       "tripNumber": 485,
-      "fixQuality": "FixOk",
+      "messageType": 9,
       "messageLength": 35
+      "latitude": 41.46466064453125,
+      "longitude": -81.51720428466797,
+      "fixQuality": "FixOk",
+      "vehicleProtocolId": "ISO15765_11_BIT_CAN",
+      "odo": 3743
     },
     "isError": false
   }
