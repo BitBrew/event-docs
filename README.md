@@ -48,7 +48,7 @@ to help route and correlate events using rules and application logic.
 
 ### Example Event Header
 
-The following is an example of an event header.
+The following is an example of a platform event header.
 
 ```json
 {
