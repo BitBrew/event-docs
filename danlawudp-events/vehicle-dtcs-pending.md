@@ -4,7 +4,7 @@
 ## Attributes
 
 - body (object)
-  - footer: `67` (number) - Contains a checksum for the message contents.
+  - footer: `229` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `VehiclePendingDTCInfo` (string) - Indicates a type for this event.
     - dtcSpnOrPidRecords: (array) - A list of pending DTC codes.
