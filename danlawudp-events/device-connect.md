@@ -6,14 +6,14 @@
   - message: (object) - Contains the contents of the event.
     - type: `ConnectDisconnectEvent` (string) - Indicates a type for this event.
     - eventType: `Connect` (string) - Further specifies the type of event.
+    - eventTime: `2016-12-29T10:52:14-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - firmwareVersion: `07.2E` (string) - The name of the firmware file that the device is running.
-    - odometer: `28` (number) - Vehicle odometer or device-calculated odometer (see `odometerInfo` for differentiator).
+    - cfgVersion: `JHGDL13` (string) - The name of the configuration file that the device is running.
     - keyOnOffDisconnect: `KeyOffDisconnect` (enum[string]) 
       - Members
         - `KeyOnDisconnect`
         - `KeyOffDisconnect`
-    - cfgVersion: `JHGDL13` (string) - The name of the configuration file that the device is running.
-    - eventTime: `2016-12-29T10:52:14-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
+    - odometer: `28` (number) - Vehicle odometer or device-calculated odometer (see `odometerInfo` for differentiator).
     - odometerInfo: `VehicleOdometer` (enum[string]) - Indicates whether the `odometer` value is read from the vehicle or the device.
       - Members
         - `Calculated` - Indicates that the `odometer` value came from the device.
@@ -62,11 +62,11 @@
       "message": {
         "type": "ConnectDisconnectEvent",
         "eventType": "Connect",
-        "firmwareVersion": "07.2E",
-        "odometer": 28,
-        "keyOnOffDisconnect": "KeyOffDisconnect",
-        "cfgVersion": "JHGDL13",
         "eventTime": "2017-06-01T11:42:13-05:00",
+        "firmwareVersion": "07.2E",
+        "cfgVersion": "JHGDL13",
+        "keyOnOffDisconnect": "KeyOffDisconnect",
+        "odometer": 28,
         "odometerInfo": "VehicleOdometer"
       },
       "header": {
