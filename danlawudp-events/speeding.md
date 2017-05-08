@@ -21,17 +21,17 @@
     - averageSpeed: `82` (number) -
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-08-19T18:51:19-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
-    - tripType: `IgnitionOff`(enum[string]) - Indicates a contextual type for this event.
+    - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
       - Members
         - `IgnitionOff`
         - `Trip`
         - `Idling`
         - `Unknown`
-    - tripNumber: `92`- A sequential number that increases after each trip. Resets after 65,536 trips.
-    - messageType: `53` (number) - 
-    - messageLength: `30` (number) - Indicates the total bytes of the message, including the checksum.
-    - latitude: `42.278709411621094` (number)
-    - longitude: `-83.74756622314453` (number)
+    - tripNumber: `91`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - messageType: `22` (number) - 
+    - messageLength: `24` (number) - Indicates the total bytes of the message, including the checksum.
+    - latitude: `42.321903228759766` (number)
+    - longitude: `-83.74046325683594` (number)
     - fixQuality: `FixOk` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
@@ -51,7 +51,7 @@
         - `J1939`
         - `J1708`
         - `Unknown`
-    - odo: `1667` (number) - Vehicle odometer or device-calculated odometer.
+    - odo: `1625` (number) - Vehicle odometer or device-calculated odometer.
 
 ## Example
 
@@ -74,15 +74,15 @@
     },
     "header": {
       "timestamp": "2017-08-19T18:51:19-04:00",
-      "latitude": 42.321903228759766,
       "tripType": "Trip",
-      "vehicleProtocolId": "ISO15765_11_BIT_CAN",
-      "longitude": -83.74046325683594,
-      "messageType": 22,
-      "odo": 1625,
       "tripNumber": 91,
+      "messageType": 22,
+      "messageLength": 24,
+      "latitude": 42.321903228759766,
+      "longitude": -83.74046325683594,
       "fixQuality": "FixOk",
-      "messageLength": 24
+      "vehicleProtocolId": "ISO15765_11_BIT_CAN",
+      "odo": 1625
     },
     "isError": false
   }
