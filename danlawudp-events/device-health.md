@@ -35,8 +35,8 @@
     - tripNumber: `0`- A sequential number that increases after each trip. Resets after 65,536 trips.
     - messageType: `15` (number) - 
     - messageLength: `6` (number) - Indicates the total bytes of the message, including the checksum.
-    - latitude: `42.2793934` (number)
-    - longitude: `-83.72955975` (number)
+    - latitude: `0` (number)
+    - longitude: `0` (number)
     - fixQuality: `FixInvalid` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
