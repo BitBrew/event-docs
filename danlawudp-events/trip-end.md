@@ -6,9 +6,9 @@
   - footer: `94` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `TripEndEvent` (string ) - Indicates a type for this event.
-    - tripTime: `1158` (number) - 
+    - tripTime: `1158` (number) - Duration of the trip in seconds.
     - distanceTravelled: `6.0` (number) -
-    - cumulativeRunningTime: `113` (number) - Time the engine has been running since the device was connected in hours.
+    - cumulativeRunningTime: `113` (number) - Time the engine has run since the device was connected in hours.
     - calculatedFuelConsumed: `0.28800000000000003` (number) - Amount of fuel consumed during the trip in gallons.
     - avgSpeed: `37` (number) - Average vehicle speed during the trip in KPH.
     - maxSpeed: `69` (number) - Maximum vehicle speed reached during the trip in KPH.
