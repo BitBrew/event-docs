@@ -37,7 +37,7 @@
       - fixQuality: `GPSNoFix` (enum[string]) - Determines the validity and accuracy of the GPS data.
         - Members
           - `GPSNoFix` - Latitude and longitude are invalid.
-          - `GPS2DFix`- Latitude and longitude are valid.
+          - `GPS2DFix` - Latitude and longitude are valid.
           - `GPS3DFix` - Latitude and longitude are valid.
           - `Unknown`
   - header (object) - UDP-specifc object containing meta-data about the event.
