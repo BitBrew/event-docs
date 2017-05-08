@@ -68,7 +68,7 @@
   "body": {
     "footer": 90,
     "message": {
-      "type": "OBDPidAndVehicleBatteryEvent"
+      "type": "OBDPidAndVehicleBatteryEvent",
       "value": 5.538384437561035,
       "eventCount": 1,
       "eventType": {
