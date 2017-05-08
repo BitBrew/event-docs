@@ -56,7 +56,7 @@
       "maxAcceleration": 16
     },
     "header": {
-      "timeStamp": 2017-11-18T16:14:34-05:00,
+      "timeStamp": "2017-11-18T16:14:34-05:00",
       "tripType": "Trip",
       "tripNumber": 304,
       "messageType": 5,
