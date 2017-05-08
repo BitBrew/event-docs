@@ -11,7 +11,7 @@
       - tripDistance: `0` (number) - Distance travelled thus far in the trip in kilometers.
       - vehicleODOStatus: `VehicleODONotSupported` (enum[string]) - Indicates whether or not the device can read from the vehicle's odometer.
         - Members
-          - `VehicleODONotSupported` -  Vehicle odometer is not supported.
+          - `VehicleODONotSupported` -  Vehicle odometer readings are not supported.
           - `VehicleODOSupported` - Vehicle odometer readings are supported.
       - obdAverageSpeed: `0` (number) - Average vehicle speed thus far in the trip in KPH.
       - hdop: `0` (number) - See [Horizontal Dilution of Precision](../horizontal-dillution-of-precision.md) for more information.
