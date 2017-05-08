@@ -60,7 +60,7 @@
         - `StoredFix` - Latitude and longitude are readings from (up to) 5 seconds ago, because the device has not been able to get a GPS fix for 5 seconds.
         - `FixInvalid` - Latitude and longitude are invalid.
         - `Unknown` - The platform cannot decode the value.
-    - vehicleProtocolId: `ISO15765_11_BIT_CAN`(enum[string]) - The type of protocol the device detected on the vehicle bus.
+    - vehicleProtocolId: `NoProtocol`(enum[string]) - The type of protocol the device detected on the vehicle bus.
       - Members
         - `NoProtocol` - Would only appear if a vehicle were being towed. 
         - `J1850VPW`
