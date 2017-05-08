@@ -1,6 +1,6 @@
 # Vehicle Battery
 
-## Properties
+## Attributes
 
 - body (object)
   - footer: `90` (number) - Contains a checksum for the message contents.
