@@ -85,7 +85,7 @@
       "tripType": "IgnitionOff",
       "tripNumber": 485,
       "messageType": 9,
-      "messageLength": 35
+      "messageLength": 35,
       "latitude": 41.46466064453125,
       "longitude": -81.51720428466797,
       "fixQuality": "FixOk",
