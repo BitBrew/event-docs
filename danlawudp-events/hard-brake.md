@@ -4,7 +4,7 @@
 
 - body (object)
   - footer: `195` (number) - Contains a checksum for the message contents.
-  - message: (object ) - Contains the contents of the event.
+  - message: (object) - Contains the contents of the event.
     - type: `HardBrakeMessage` (string) - Indicates a type for this event.
     - initialSpeed: `52` (number) - Vehicle speed at the beginning of the braking event in KPH.
     - finalSpeed: `21` (number) - Vehicle speed at the end of the brakin event in KPH.
