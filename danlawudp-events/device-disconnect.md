@@ -3,7 +3,7 @@
 ## Properties
 
 - body: (object)
-  - footer: `83` (number) - Contains a checksum for the message contents.
+  - footer: `128` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `ConnectDisconnectEvent` (string) - Indicates a type for this event.
     - eventType: `Disconnect` (string) - Further specifies the type of event.
@@ -59,6 +59,7 @@
 {
   "header": {...},
   "body": {
+    "footer": 128,
     "message": {
       "type": "ConnectDisconnectEvent",
       "eventType": "Disconnect",
@@ -69,7 +70,6 @@
       "odometer": 135857,
       "odometerInfo": "VehicleOdometer"
     },
-    "footer": 128,
     "header": {
       "timestamp": "2017-08-29T17:46:58-05:00",
       "latitude": 42.478084564208984,
