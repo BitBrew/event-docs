@@ -1,4 +1,5 @@
 # GPS
+The device uses GPS and GLONASS to provide its location at configurable periodic intervals and based on triggers.
 
 ## Attributes
 
@@ -21,7 +22,7 @@
           - `OnDemandPing`
           - `Unknown`
       - cog: `0` (number) - Indicates change in course over ground in degrees relative to true north.
-      - obdSpeed: `0` (number) - Vehicle speed.
+      - obdSpeed: `0` (number) - Vehicle speed in KPH.
       - height: `0` (number) - Height above sea level in meters.
       - tripDistance: `0` (number) - Distance travelled thus far in the trip in kilometers.
       - vehicleODOStatus: `VehicleODONotSupported` (enum[string]) - Indicates whether or not the device can read from the vehicle's odometer.
@@ -42,8 +43,7 @@
           - `Unknown`
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2016-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
-
-    - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
+    - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
       - Members
         - `IgnitionOff`
         - `Trip`
@@ -60,7 +60,7 @@
         - `StoredFix` - Latitude and longitude are readings from (up to) 5 seconds ago, because the device has not been able to get a GPS fix for 5 seconds.
         - `FixInvalid` - Latitude and longitude are invalid.
         - `Unknown` - The platform cannot decode the value.
-    - vehicleProtocolId: `NoProtocol`(enum[string]) - The type of protocol the device detected on the vehicle bus.
+    - vehicleProtocolId: `NoProtocol` (enum[string]) - The type of protocol the device detected on the vehicle bus.
       - Members
         - `NoProtocol` - Would only appear if a vehicle were being towed. 
         - `J1850VPW`
