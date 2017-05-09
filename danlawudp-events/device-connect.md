@@ -1,6 +1,7 @@
 # Device Connect
 
-## Properties
+## Attributes
+
 - body: (object)
   - footer: `83` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
