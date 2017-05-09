@@ -1,4 +1,5 @@
 # Device Connect
+This event serves as a notification that a device has been plugged in to a vehicle's OBD-II port.
 
 ## Attributes
 
