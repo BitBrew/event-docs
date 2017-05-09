@@ -58,7 +58,7 @@
       "isKeyOn": false,
       "vin": "JM1BK343551221507",
       "vehicleLastKnownLoc": 0,
-      "vehicleOdoAvailable": false
+      "vehicleOdoAvailable": false,
       "vehicleOdometer": 0,
       "calculatedOdometer": 1667,
     },
