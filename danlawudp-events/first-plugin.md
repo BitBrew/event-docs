@@ -1,4 +1,5 @@
 # First Plugin
+This event is generated when a device is plugged in and powered for the very first time. This event only occurs once in the lifetime of a device, and is not repeated when a device is unplugged and then plugged back in, even into a different vehicle.
 
 ## Attributes
 
@@ -16,7 +17,7 @@
     - vin: `1F1G05GV2B1049415` - Vehicle Identification Number provided by the vehicle. Empty string when VIN is unavailable.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2016-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
-    - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
+    - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
       - Members
         - `IgnitionOff`
         - `Trip`
@@ -68,7 +69,7 @@
       "tripType": "Trip",
       "tripNumber": 0,
       "messageType": 40,
-      "messageLength": 40
+      "messageLength": 40,
       "latitude": 42.27383226,
       "longitude": -83.72953827,
       "fixQuality": "FixOk",
