@@ -1,4 +1,5 @@
 # IO Extender
+This event provides input data and digital output status data for analog channels if an IO extender module is attached to the device.
 
 ## Attributes
 
