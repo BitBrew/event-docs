@@ -1,5 +1,5 @@
 # Bluetooth Beacon
-This event sends information about specific drivers detected in the vehicle via Bluetooth® beacon cards. Up to four beacons can be detected, and information about the beacons – including their unique MAC addresses and their relative signal strength – are contained in the `beaconInfo` object.
+This event sends information about specific drivers detected in the vehicle via Bluetooth® beacon cards. Up to four beacons can be detected, and information about the beacons—including their unique MAC addresses and their relative signal strengths—are contained in the `beaconInfo` object.
 
 ## Properties
 - body: (object)
