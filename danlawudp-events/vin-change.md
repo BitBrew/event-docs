@@ -1,4 +1,5 @@
 # VIN Change
+This event is generated when the Datalogger detects a change in VIN, which will occur after the device powered on by a trip start.
 
 ## Attributes
 
