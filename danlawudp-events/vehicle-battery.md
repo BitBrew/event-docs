@@ -6,7 +6,7 @@
   - footer: `90` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `OBDPidAndVehicleBatteryEvent` (string) - Indicates a type for this event.
-    - value: `5.538384437561035` (number) - PID value.
+    - value: `5.538384437561035` (number) - Voltage of the battery in volts.
     - eventCount: `1` (number) - The number of times this event occurred during the trip.
   - eventType: (object) - Contains the data for the event.
     - type: `BatteryEvent` (string) - Indicates a more specific type for this event.
