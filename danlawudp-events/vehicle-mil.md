@@ -6,14 +6,14 @@
   - footer: `229` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `VehicleMILInfo` (string) - Indicates a type for this event.
-    - milStatus": `true` - Whether the Malfunction Indicator Lamp is on or not.
-    - milDistance": `1000` - Distance travelled with MIL on in kilometers.
-    - milTime": `1000` - Time travelled with MIL on in minutes.
-    - dtcCount": `11` - Number of DTCs set.
-    - clrTime": `0` - Time since DTC was cleared in minutes.
-    - clrDistance": `0` - Distance travelled since DTC was cleared in kilometers.
-    - deviceTripTime": `6633` - Accumulated trip time since the first time device stored this MIL info in seconds.
-    - deviceTripDistance": `8`- Accumulated distance travelled during this trip since the first time device storied this MIL info in kilometers.
+    - milStatus: `true` - Whether the Malfunction Indicator Lamp is on or not.
+    - milDistance: `1000` - Distance travelled with MIL on in kilometers.
+    - milTime: `1000` - Time travelled with MIL on in minutes.
+    - dtcCount: `11` - Number of DTCs set.
+    - clrTime: `0` - Time since DTC was cleared in minutes.
+    - clrDistance: `0` - Distance travelled since DTC was cleared in kilometers.
+    - deviceTripTime: `6633` - Accumulated trip time since the first time device stored this MIL info in seconds.
+    - deviceTripDistance: `8`- Accumulated distance travelled during this trip since the first time device storied this MIL info in kilometers.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-09-21T17:31:42-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
