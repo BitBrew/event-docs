@@ -20,7 +20,7 @@
     - cumulativeIdleTime: `39` (number) - Time the engine has been idling since the device was connected in hours.
     - hardAcclCounts: `0` (number) - Number of hard acceleration events during the trip.
     - hardBreakingCounts: `0` (number) - Number of hard braking events during the trip.
-    - consumedAir: `11868.81` (number) - Amount of air consumed dduring the trip in grams.
+    - consumedAir: `11868.81` (number) - Amount of air consumed during the trip in grams (totalled from the Mass Airflow Sensor).
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-01-01T15:21:40-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `IgnitionOff`(enum[string]) - Indicates a contextual type for this event.
