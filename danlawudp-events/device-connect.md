@@ -11,10 +11,7 @@ This event serves as a notification that a device has been plugged in to a vehic
     - eventTime: `2016-12-29T10:52:14-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - firmwareVersion: `07.2E` (string) - The name of the firmware file that the device is running.
     - cfgVersion: `JHGDL13` (string) - The name of the configuration file that the device is running.
-    - keyOnOffDisconnect: `KeyOffDisconnect` (enum[string]) 
-      - Members
-        - `KeyOnDisconnect`
-        - `KeyOffDisconnect`
+    - keyOnOffDisconnect: `KeyOffDisconnect` (enum[string]) - This field has no meaning when the `eventType` is `Connect`.
     - odometer: `28` (number) - Vehicle odometer or device-calculated odometer (see `odometerInfo` for differentiator).
     - odometerInfo: `VehicleOdometer` (enum[string]) - Indicates whether the `odometer` value is read from the vehicle or the device.
       - Members
