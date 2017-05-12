@@ -8,7 +8,7 @@
     - type: `RealTimeDisconnectEvent` (string) - Indicates a type for this event.
     - isKeyOn: `false` (boolean) - Indicates whether the vehicle was on at the time the device was disconnected.
     - vin: `JM1BK343551221507` - Vehicle Identification Number provided by the vehicle.
-    - vehicleLastKnownLoc: `0` - Distance travelled from the most recent GPS fix in kilometers.
+    - vehicleLastKnownLoc: `0` - Distance travelled from the most recent GPS fix before being unplugged in kilometers.
     - vehicleOdoAvailable: `false` (boolean) - Indicates whether the odometer value is read from the vehicle or the device.
     - vehicleOdometer: `0` - Vehicle odometer value.
     - calculatedOdometer": `1667` - Device odometer value.
