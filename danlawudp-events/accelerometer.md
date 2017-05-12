@@ -26,8 +26,8 @@ needed to verify the impact event are all configurable.
         - `HardBraking`- A hard braking event was generated because the configured event criteria were met.
         - `HardTurn` - A hard turn event was generated because the configured event criteria were met.
         - `Unknown` - The platform is unable to determine the accelerometer event type.
-    - triggerValue: `518` (number) - The configured threshold for this event type in mG.
-    - maxValue: `518` (number) - The maximum value reached for this event in mG.
+    - triggerValue: `2000` (number) - The configured threshold for this event type in mG.
+    - maxValue: `4000` (number) - The maximum value reached for this event in mG.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
@@ -72,8 +72,8 @@ needed to verify the impact event are all configurable.
     "message": {
       "type": "AccelerometerEvent",
       "eventType": "ImpactEvent",
-      "triggerValue": 518,
-      "maxValue": 518
+      "triggerValue": 2000,
+      "maxValue": 4000
     },
     "header": {
       "timestamp": "2017-02-05T10:36:31-05:00",
