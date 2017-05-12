@@ -9,9 +9,9 @@
     - milStatus: `true` - Whether the Malfunction Indicator Lamp is on or not.
     - milDistance: `1000` - Distance travelled with MIL on in kilometers.
     - milTime: `1000` - Time travelled with MIL on in minutes.
-    - dtcCount: `11` - Number of DTCs set.
-    - clrTime: `0` - Time since DTC was cleared in minutes.
-    - clrDistance: `0` - Distance travelled since DTC was cleared in kilometers.
+    - dtcCount: `11` - Number of current DTCs.
+    - clrTime: `0` - Time since a DTC was cleared in minutes.
+    - clrDistance: `0` - Distance travelled since a DTC was cleared in kilometers.
     - deviceTripTime: `6633` - Accumulated trip time since the first time device stored this MIL info in seconds.
     - deviceTripDistance: `8`- Accumulated distance travelled during this trip since the first time device storied this MIL info in kilometers.
   - header (object) - UDP-specifc object containing meta-data about the event.
