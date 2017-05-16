@@ -20,6 +20,7 @@ This unsolicited event warns of a fault or issue with the device.
             - `OBDFault`
             - `TimeZone`
             - `VehicleCrankInfo`
+            - `BrownoutDetected`
         - temporaryErrorCount: `0` (number) - Information based on the `type` of fault.
         - primaryAndSecondaryErrorCount: `0` (number) - Information based on the `type` of fault.
     - faultId: `29` - Corresponds to the `type` of fault listed in the `faultInformation` object.
