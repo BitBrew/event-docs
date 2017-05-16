@@ -1,4 +1,5 @@
 # Hard Brake
+A hard braking event is generated if the vehicle's deceleration and speed are greater than or equal to the device's configured thresholds.
 
 ## Attributes
 
@@ -17,7 +18,7 @@
         - `Trip`
         - `Idling`
         - `Unknown`
-    - tripNumber: `43`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - tripNumber: `43` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
     - messageType: `5` (number) - 
     - messageLength: `4` (number) - Indicates the total bytes of the message, including the checksum.
     - latitude: `42.333953857421875` (number)

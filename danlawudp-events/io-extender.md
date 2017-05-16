@@ -1,4 +1,5 @@
 # IO Extender
+This event provides input data and digital output status data for analog channels if an IO extender module is attached to the device.
 
 ## Attributes
 
@@ -6,7 +7,7 @@
   - footer: `195` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `IoExtenderAnalogDigitalChannelEvent` (string) - Indicates a type for this event.
-    - analogChannel0: `0.008813186548650265` (number) - The analog channel output in volts.
+    - analogChannel0: `0.008813186548650265` (number) - The analog channel input in volts.
     - analogChannel1: `0.0` (number) - The analog channel input in volts.
     - analogChannel2: `0.0` (number) - The analog channel intput in volts.
     - analogChannel3: `0.0` (number) - The analog channel intput in volts.

@@ -6,13 +6,13 @@
   - footer: `7` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `OverSpeedingMessage` (string) - Indicates a type for this event.
-    - startTime: `2017-08-19T22:51:10Z` (string) -
+    - startTime: `2017-08-19T22:51:10Z` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event began.
     - initialLongitude: `-83.73925018310547` (number)
     - initialLatitude: `42.31918716430664`(number)
-    - startODO: `1625` (number) - Odometer reading at the beginning of 
+    - startODO: `1625` (number) - Vehicle or device odometer reading at the beginning of the event.
     - duration: `1` (number) - Duration of speeding event in seconds.
     - distance: `1.3` (number) - Distance travelled during speeding event in kilometers.
-    - overSpeedType: `Unknown` (enum[string]) - A more specific category for this event
+    - overSpeedType: `Unknown` (enum[string]) - A more specific category for this event.
       - Members
         - `HighSpeed`
         - `CriticalSpeed`

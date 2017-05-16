@@ -1,19 +1,28 @@
 # Device Health
+This unsolicited event warns of a fault or issue with the device.
 
 ## Attributes
 - body (object)
   - footer: `102` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
-    - type: `DeviceHealthEvent` (strng) - Indicates a type for this event.
+    - type: `DeviceHealthEvent` (string) - Indicates a type for this event.
     - faultGroup: `Information` (enum[string]) - Assigns a category for the type of fault the device is encountering.
       - `Critical`
       - `Major`
       - `Information`
       - `Unknown`
     - faultInformation: (object) - Contains information about the fault.
-        - primaryAndSecondaryErrorCount: `0`
-        - type: `ConfigFailure`
-        - temporaryErrorCount": `0`
+        - type: `ConfigFailure` (enum[string]) - Indicates the type of error the device is encountering.
+          - Members:
+            - `ExcessiveDataTransmit`
+            - `MissingSpeedInfo`
+            - `FOTAErrorCodes`
+            - `OBDFault`
+            - `TimeZone`
+            - `VehicleCrankInfo`
+            - `BrownoutDetected`
+        - temporaryErrorCount: `0` (number) - Information based on the `type` of fault.
+        - primaryAndSecondaryErrorCount: `0` (number) - Information based on the `type` of fault.
     - faultId: `29` - Corresponds to the `type` of fault listed in the `faultInformation` object.
     - faultRecoveryAction: `SafeMode` (enum[string) - Action that the device took to correct the fault.
       - Members
@@ -69,8 +78,8 @@
       "type": "DeviceHealthEvent",
       "faultGroup": "Information",
       "faultInformation": {
-        "primaryAndSecondaryErrorCount": 0,
         "type": "ConfigFailure",
+        "primaryAndSecondaryErrorCount": 0,
         "temporaryErrorCount": 0
       },
       "faultId": 29,

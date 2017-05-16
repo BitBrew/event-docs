@@ -1,4 +1,5 @@
 # Vehicle Movement
+This event reports that a vehicle is in motion without being on, such as when it's being towed.
 
 ## Attributes
 

@@ -1,4 +1,5 @@
 # Idling
+An idling event is generated if the vehicle's speed is less than or equal to the configured threshold for a configured amount of time.
 
 ## Attributes
 - body: (object)

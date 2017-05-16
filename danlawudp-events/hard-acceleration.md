@@ -1,4 +1,5 @@
 # Hard Acceleration
+An acceleration event is generated if the vehicle's acceleration and speed are greater than or equal to the device's configured thresholds.
 
 ## Attributes
 - body (object)
