@@ -12,9 +12,16 @@ This unsolicited event warns of a fault or issue with the device.
       - `Information`
       - `Unknown`
     - faultInformation: (object) - Contains information about the fault.
-        - primaryAndSecondaryErrorCount: `0` (number) -
-        - type: `ConfigFailure` (string) - 
-        - temporaryErrorCount: `0` (number) - 
+        - type: `ConfigFailure` (enum[string]) - Indicates the type of error the device is encountering.
+          - Members:
+            - `ExcessiveDataTransmit`
+            - `MissingSpeedInfo`
+            - `FOTAErrorCodes`
+            - `OBDFault`
+            - `TimeZone`
+            - `VehicleCrankInfo`
+        - temporaryErrorCount: `0` (number) - Information based on the `type` of fault.
+        - primaryAndSecondaryErrorCount: `0` (number) - Information based on the `type` of fault.
     - faultId: `29` - Corresponds to the `type` of fault listed in the `faultInformation` object.
     - faultRecoveryAction: `SafeMode` (enum[string) - Action that the device took to correct the fault.
       - Members
@@ -70,8 +77,8 @@ This unsolicited event warns of a fault or issue with the device.
       "type": "DeviceHealthEvent",
       "faultGroup": "Information",
       "faultInformation": {
-        "primaryAndSecondaryErrorCount": 0,
         "type": "ConfigFailure",
+        "primaryAndSecondaryErrorCount": 0,
         "temporaryErrorCount": 0
       },
       "faultId": 29,
