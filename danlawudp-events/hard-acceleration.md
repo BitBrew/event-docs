@@ -41,7 +41,7 @@ An acceleration event is generated if the vehicle's acceleration and speed are g
         - `J1939`
         - `J1708`
         - `Unknown`
-    - odo: `100` (number) - Vehicle odometer or device-calculated odometer.
+    - odo: `375` (number) - Vehicle odometer or device-calculated odometer.
 
 ## Example
 
