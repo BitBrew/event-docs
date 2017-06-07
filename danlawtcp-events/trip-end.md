@@ -4,13 +4,12 @@
 
 ### Attributes
 
+- type: 'TripEndRecordRelativeTime` - (string) - Indicates a type for this event.
 - timestamp: `2017-04-27T17:06:36-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
+- tripNumber: `1736` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
 - odometer: `23` (number) - Device-calculated odometer.
 - fuelConsumed: `0.03800000086426735` (number) - Fuel consumed during trip in gallons. 
 - remaining: `00` (number) - Remaining fuel in the fuel tank in gallons.
-- type: 'TripEndRecordRelativeTime` - (string) - Indicates a type for this event.
-- tripNumber: `1736` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
-
 
 ### Example
 
@@ -18,12 +17,12 @@
 {
     "header": {...},
     "body": {
+        "type": "TripEndRecordRelativeTime",
         "timestamp": "2017-04-27T17:06:36-04:00",
+        "tripNumber": 1736,
         "odometer": 23,
         "fuelConsumed": 0.03800000086426735,
-        "remaining": "00",
-        "type": "TripEndRecordRelativeTime",
-        "tripNumber": 1736
+        "remaining": "00"
     }
 }
 ```
@@ -37,7 +36,10 @@ Currently unavailable
 ## <a name="trip-end-absolute-time-gps"></a> Trip End Absolute Time and GPS
 
 ### Attributes
+
+- type: `TripEndRecordAbsoluteTimeAndGps` (string) - Indicates a type for this event.
 - timestamp: `2016-12-08T15:46:21-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
+- tripNumber: `39` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
 - odometer: `6` (number) - Device-calculated odometer (see `validity` object for more information).
 - gps: (object) - Contains the location where this event was produced.
   - heading: `0` (number) - The angle between the direction in which the object's nose is pointing and a reference direction (e.g. true north).
@@ -74,9 +76,6 @@ Currently unavailable
     - Members
       - `true` - The odometer value reported above was read from the vehicle.
       - `false` - The odometer value reported above came from the device. This is the expected value for a `TripEnd` event.
-- type: `TripEndRecordAbsoluteTimeAndGps` (string) - Indicates a type for this event.
-- tripNumber: `39` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
-
 
 ### Example
 
@@ -84,7 +83,9 @@ Currently unavailable
 {
   "header": {...},
   "body": {
+    "type": "TripEndRecordAbsoluteTimeAndGps",
     "timestamp": "2016-12-08T15:46:21-05:00",
+    "tripNumber": 39,
     "odometer": 6,
     "gps": {
       "heading": 0,
@@ -101,9 +102,7 @@ Currently unavailable
       "kmUnits": false,
       "nonObdTripStart": false,
       "vehicleOdometer": false
-    },
-    "type": "TripEndRecordAbsoluteTimeAndGps",
-    "tripNumber": 39
+    }
   }
 }
 ```
