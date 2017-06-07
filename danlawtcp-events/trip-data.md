@@ -14,7 +14,7 @@ readings at  configurable intervals or triggers.
 
 ```json
 {
-    "header": {...}
+    "header": {...},
     "body": {
         "type": "TripData",
         "timestamp": "2017-06-06T12:51:22-04:00",
