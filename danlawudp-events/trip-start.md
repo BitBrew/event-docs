@@ -6,10 +6,10 @@
   - footer: `94` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `TripStartEvent` (string) - Indicates a type for this event.
-    - tripNumber: `46` - A sequential number that increases after each trip. Resets after 65,536 trips.
+    - tripNumber: `46`(number) - A sequential number that increases after each trip. Resets after 65,536 trips.
     - milStatus: `0` (number) - Always zero. 
-    - vin: `1C16G05GV2B104942` - Vehicle Identification Number provided by the vehicle.
-    - imei: `354235053108415` - International Mobile Equipment Identity number, unique to every Danlaw Datalogger.
+    - vin: `1C16G05GV2B104942` (string) - Vehicle Identification Number provided by the vehicle.
+    - imei: `354235053108415` (string) - International Mobile Equipment Identity number, unique to every Danlaw Datalogger.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-02-13T15:04:49-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
