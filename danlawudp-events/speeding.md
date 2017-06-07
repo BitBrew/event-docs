@@ -17,8 +17,8 @@
         - `HighSpeed`
         - `CriticalSpeed`
         - `Unknown`
-    - peakSpeed: `85` (number) -
-    - averageSpeed: `82` (number) -
+    - peakSpeed: `85` (number) - The maximum speed reached during this event in KPH.
+    - averageSpeed: `82` (number) - The average speed during this event in KPH.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-08-19T18:51:19-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
