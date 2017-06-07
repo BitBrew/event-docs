@@ -7,11 +7,11 @@
   - message: (object) - Contains the contents of the event.
     - type: `RealTimeDisconnectEvent` (string) - Indicates a type for this event.
     - isKeyOn: `false` (boolean) - Indicates whether the vehicle was on at the time the device was disconnected.
-    - vin: `JM1BK343551221507` - Vehicle Identification Number provided by the vehicle.
-    - vehicleLastKnownLoc: `0` - Distance travelled from the most recent GPS fix before being unplugged in kilometers.
+    - vin: `JM1BK343551221507` (string) - Vehicle Identification Number provided by the vehicle.
+    - vehicleLastKnownLoc: `0` (number) - Distance travelled from the most recent GPS fix before being unplugged in kilometers.
     - vehicleOdoAvailable: `false` (boolean) - Indicates whether the odometer value is read from the vehicle or the device.
-    - vehicleOdometer: `0` - Vehicle odometer value.
-    - calculatedOdometer": `1667` - Device odometer value.
+    - vehicleOdometer: `0` (number) - Vehicle odometer value.
+    - calculatedOdometer": `1667` (number) - Device odometer value.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-08-22T16:08:10-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `IgnitionOff`(enum[string]) - Indicates a contextual type for this event.
