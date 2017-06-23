@@ -784,7 +784,7 @@ An idling event is generated if the vehicle's speed is less than or equal to the
 
 ### <a name="speed-acceleration-histogram"></a> Speed Acceleration Histogram
 
-This `obdSpeedEventData` type describes the time driven for a configurable set of acceleration ranges (in miles per hour per second or
+This `obdSpeedEventData` type describes the number of incidences a vehicle accelerated within a configurable set of acceleration ranges (in miles per hour per second or
 kilometers per hour second based on device configuration).
 
 There are up to 20 configurable acceleration buckets (excluding the first and last, which are predefined).
@@ -798,12 +798,12 @@ device configuration when using data from this event type.
 - obdSpeedEventData: (object)
   - data: (array[number])
       - Members
-      - `101` - Time in seconds driven in the first acceleration bucket, which is zero MPH/s or KPH/s.
-      - `0` - Time driven in the second acceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
-      - `0` - Time driven in the third acceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Time driven in the fourth acceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Time driven in the fifth acceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Time driven in the seventh acceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
+      - `101` - Number of acceleration counts in the first acceleration bucket, which is zero MPH/s or KPH/s.
+      - `0` - Number of acceleration counts in the second acceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
+      - `0` - Number of acceleration counts in the third acceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Number of acceleration counts in the fourth acceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Number of acceleration counts in the fifth acceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Number of acceleration counts in the seventh acceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
   - type: `SpeedAccelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
@@ -835,8 +835,7 @@ device configuration when using data from this event type.
 
 ### <a name="speed-deceleration-histogram"></a> Speed Deceleration Histogram
 
-This `obdSpeedEventData` type describes the time driven for a configurable set of deceleration ranges (in miles per hour per second or
-kilometers per hour second based on device configuration).
+This `obdSpeedEventData` type describes the number of incidences a vehicle decelerated within a configurable set of deceleration ranges (in miles per hour per second or kilometers per hour second based on device configuration).
 
 There are up to 20 configurable deceleration buckets (excluding the first and last, which are predefined).
 
@@ -849,12 +848,12 @@ device configuration when using data from this event type.
 - obdSpeedEventData: (object)
   - data: (array[number])
     - Members
-    - `189` - Time in seconds driven in the first deceleration bucket, which is zero MPH/s or KPH/s.
-    - `400` - Time driven in the second deceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
-    - `237` - Time driven in the third deceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
-    - `15` - Time driven in the fourth deceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
-    - `3` - Time driven in the fifth deceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
-    - `0` - Time driven in the seventh deceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
+    - `189` - Number of deceleration counts in seconds driven in the first deceleration bucket, which is zero MPH/s or KPH/s.
+    - `400` - Number of deceleration counts in the second deceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
+    - `237` - Number of deceleration counts in the third deceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
+    - `15` - Number of deceleration counts in the fourth deceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
+    - `3` - Number of deceleration counts in the fifth deceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
+    - `0` - Number of deceleration counts in the seventh deceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
   - type: `SpeedDecelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
