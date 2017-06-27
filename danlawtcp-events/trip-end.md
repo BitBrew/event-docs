@@ -9,7 +9,7 @@
 - tripNumber: `1736` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
 - odometer: `23` (number) - Device-calculated odometer.
 - fuelConsumed: `0.03800000086426735` (number) - Fuel consumed during trip in gallons. 
-- remaining: `00` (number) - Remaining fuel in the fuel tank in gallons.
+- remaining: `00` (number) - For BitBrew purposes only.
 
 ### Example
 
