@@ -5,26 +5,45 @@
 This event represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the `eventData` array varies.
 
 ### Attributes
+- eventData: (object)
+  - type: `AccelerometerEvent` (string) - The specific type of event.
+  - relativeSecond: `0` (number) - The relative time from the previous event in seconds. `0` indicates that this is the first event.
+  - eventType: `2` (enum[number]) - Indicates the condition that triggered this event.
+    - Members
+      - `0` - AT histogram data
+      - `1` - Positive X-Axis event
+      - `2` - Positive Y-Axis event
+      - `4` - Positive Z-Axis event
+      - `8` - X histogram data
+      - `16` - Negative X-Axis event
+      - `32` - Negative Y-Axis event
+      - `64` - Negative Z-Axis event
+      - `128` - Y Histogram data
+      - `136` - Z histogram data
+  - eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
+    - (object)
+      - x: `1` (number) - The X-axis reading
+      - y: `0` (number) - The Y-axis reading
+      - z: `0` (number) - The Z-axis reading
 
-- type: `AccelerometerEvent` (string) - The specific type of event.
-- relativeSecond: `1` (number) - The relative time from the previous event in seconds.
-- eventType: `1` (enum[number]) - Indicates the condition that triggered this event.
-  - Members
-    - `0` - AT histogram data
-    - `1` - Positive X-Axis event
-    - `2` - Positive Y-Axis event
-    - `4` - Positive Z-Axis event
-    - `8` - X histogram data
-    - `16` - Negative X-Axis event
-    - `32` - Negative Y-Axis event
-    - `64` - Negative Z-Axis event
-    - `128` - Y Histogram data
-    - `136` - Z histogram data
-- eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
-  - (object)
-    - x: `1` (number) - The X-axis reading
-    - y: `0` (number) - The Y-axis reading
-    - z: `0` (number) - The Z-axis reading
+### Example
+
+```json
+{
+    "header": {...}
+    "body": {
+        "type": "TripEventRelativeTime",
+        "timestamp": "2017-06-25T23:20:05-04:00",
+        "tripNumber": 327
+        "eventData": {
+            "type": "AccelerometerEvent",
+            "relativeSecond": 0,
+            "eventType": 2,
+            "eventData": [],
+        },
+    },
+}
+```
 
 ## <a name="bluetooth"></a> BluetoothEvent
 
