@@ -22,7 +22,7 @@ This event provides summarization of a high or critical speeding event after the
     - averageSpeed: `122` (number) - The average speed during this event in KPH.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-06-25T22:22:58-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
-    - tripType: `Trip` (enum[string]) - Indicates a contextual type for this event.
+    - tripType: `Unknown` (enum[string]) - Indicates a contextual type for this event.
       - Members
         - `IgnitionOff`
         - `Trip`
