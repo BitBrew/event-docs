@@ -814,12 +814,12 @@ The platform is unable to provide the custom definitions for the speed ranges us
 - obdSpeedEventData: (object)
   - data: (array[number])
       - Members
-      - `101` - Number of acceleration counts in the first speed bucket, which is zero MPH/s or KPH/s.
-      - `0` - Number of acceleration counts in the second speed bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
-      - `0` - Number of acceleration counts in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Number of acceleration counts in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Number of acceleration counts in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
-      - `0` - Number of acceleration counts in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
+      - `101` - Number of hard acceleration events in the first speed bucket, which is zero MPH or KPH.
+      - `0` - Number of hard acceleration events in the second speed bucket, which is 1-A (A is a configurable speed in MPH or KPH).
+      - `0` - Number of hard acceleration events in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH or KPH).
+      - `0` - Number of hard acceleration events in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH or KPH).
+      - `0` - Number of hard acceleration events in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH or KPH).
+      - `0` - Number of hard acceleration events in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH or KPH).
   - type: `SpeedAccelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
@@ -864,12 +864,12 @@ device configuration when using data from this event type.
 - obdSpeedEventData: (object)
   - data: (array[number])
     - Members
-    - `189` - Number of deceleration counts in seconds driven in the first speed bucket, which is zero MPH/s or KPH/s.
-    - `400` - Number of deceleration counts in the second speed bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
-    - `237` - Number of deceleration counts in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
-    - `15` - Number of deceleration counts in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
-    - `3` - Number of deceleration counts in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
-    - `0` - Number of deceleration counts in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
+    - `0` - Number of hard braking events in the first speed bucket, which is zero MPH or KPH.
+    - `2` - Number of hard braking events in the second speed bucket, which is 1-A (A is a configurable speed in MPH or KPH).
+    - `1` - Number of hard braking events in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH or KPH).
+    - `0` - Number of hard braking events in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH or KPH).
+    - `0` - Number of hard braking events in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH or KPH).
+    - `0` - Number of hard braking events in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH or KPH).
   - type: `SpeedDecelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
@@ -885,11 +885,11 @@ device configuration when using data from this event type.
       "type": "ObdSpeedEvent",
       "obdSpeedEventData": {
         "data": [
-            189,
-            400,
-            237,
-            15,
-            3,
+            0,
+            2,
+            1,
+            0,
+            0,
             0
         ],
         "type": "SpeedDecelerationHistogram"
