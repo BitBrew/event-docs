@@ -5,45 +5,26 @@
 This event represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the `eventData` array varies.
 
 ### Attributes
-- eventData: (object)
-  - type: `AccelerometerEvent` (string) - The specific type of event.
-  - relativeSecond: `0` (number) - The relative time from the previous event in seconds. `0` indicates that this is the first event.
-  - eventType: `2` (enum[number]) - Indicates the condition that triggered this event.
-    - Members
-      - `0` - AT histogram data
-      - `1` - Positive X-Axis event
-      - `2` - Positive Y-Axis event
-      - `4` - Positive Z-Axis event
-      - `8` - X histogram data
-      - `16` - Negative X-Axis event
-      - `32` - Negative Y-Axis event
-      - `64` - Negative Z-Axis event
-      - `128` - Y Histogram data
-      - `136` - Z histogram data
-  - eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
-    - (object)
-      - x: `1` (number) - The X-axis reading
-      - y: `0` (number) - The Y-axis reading
-      - z: `0` (number) - The Z-axis reading
 
-### Example
-
-```json
-{
-    "header": {...}
-    "body": {
-        "type": "TripEventRelativeTime",
-        "timestamp": "2017-06-25T23:20:05-04:00",
-        "tripNumber": 327
-        "eventData": {
-            "type": "AccelerometerEvent",
-            "relativeSecond": 0,
-            "eventType": 2,
-            "eventData": [],
-        },
-    },
-}
-```
+- type: `AccelerometerEvent` (string) - The specific type of event.
+- relativeSecond: `1` (number) - The relative time from the previous event in seconds.
+- eventType: `1` (enum[number]) - Indicates the condition that triggered this event.
+  - Members
+    - `0` - AT histogram data
+    - `1` - Positive X-Axis event
+    - `2` - Positive Y-Axis event
+    - `4` - Positive Z-Axis event
+    - `8` - X histogram data
+    - `16` - Negative X-Axis event
+    - `32` - Negative Y-Axis event
+    - `64` - Negative Z-Axis event
+    - `128` - Y Histogram data
+    - `136` - Z histogram data
+- eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
+  - (object)
+    - x: `1` (number) - The X-axis reading
+    - y: `0` (number) - The Y-axis reading
+    - z: `0` (number) - The Z-axis reading
 
 ## <a name="bluetooth"></a> BluetoothEvent
 
@@ -803,23 +784,26 @@ An idling event is generated if the vehicle's speed is less than or equal to the
 
 ### <a name="speed-acceleration-histogram"></a> Speed Acceleration Histogram
 
-This `obdSpeedEventData` type describes the speed ranges in which a vehicle's hard acceleration events (as configured) took place (in miles per hour per second or kilometers per hour second based on device configuration).
+This `obdSpeedEventData` type describes the time driven for a configurable set of acceleration ranges (in miles per hour per second or
+kilometers per hour second based on device configuration).
 
 There are up to 20 configurable acceleration buckets (excluding the first and last, which are predefined).
 
-The platform is unable to provide the custom definitions for the speed ranges used in this event type. Please consult the speed range definitions in the device configuration when using data from this event type.
+The platform is unable to provide the custom definitions for the acceleration ranges
+used in this event type. Please consult the acceleration range definitions in the
+device configuration when using data from this event type.
 
 #### Attributes
 
 - obdSpeedEventData: (object)
   - data: (array[number])
       - Members
-      - `101` - Number of hard acceleration events in the first speed bucket, which is zero MPH or KPH.
-      - `0` - Number of hard acceleration events in the second speed bucket, which is 1-A (A is a configurable speed in MPH or KPH).
-      - `0` - Number of hard acceleration events in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH or KPH).
-      - `0` - Number of hard acceleration events in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH or KPH).
-      - `0` - Number of hard acceleration events in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH or KPH).
-      - `0` - Number of hard acceleration events in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH or KPH).
+      - `101` - Time in seconds driven in the first acceleration bucket, which is zero MPH/s or KPH/s.
+      - `0` - Time driven in the second acceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
+      - `0` - Time driven in the third acceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Time driven in the fourth acceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Time driven in the fifth acceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
+      - `0` - Time driven in the seventh acceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
   - type: `SpeedAccelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
@@ -851,7 +835,8 @@ The platform is unable to provide the custom definitions for the speed ranges us
 
 ### <a name="speed-deceleration-histogram"></a> Speed Deceleration Histogram
 
-This `obdSpeedEventData` type describes the speed ranges in which a vehicle's hard braking events (as configured) took place (in miles per hour per second or kilometers per hour second based on device configuration).
+This `obdSpeedEventData` type describes the time driven for a configurable set of deceleration ranges (in miles per hour per second or
+kilometers per hour second based on device configuration).
 
 There are up to 20 configurable deceleration buckets (excluding the first and last, which are predefined).
 
@@ -864,12 +849,12 @@ device configuration when using data from this event type.
 - obdSpeedEventData: (object)
   - data: (array[number])
     - Members
-    - `0` - Number of hard braking events in the first speed bucket, which is zero MPH or KPH.
-    - `2` - Number of hard braking events in the second speed bucket, which is 1-A (A is a configurable speed in MPH or KPH).
-    - `1` - Number of hard braking events in the third speed bucket, which is A-B (A and B are a configurable speeds in MPH or KPH).
-    - `0` - Number of hard braking events in the fourth speed bucket, which is B-C (B and C are a configurable speeds in MPH or KPH).
-    - `0` - Number of hard braking events in the fifth speed bucket, which is C-D (C and D are a configurable speeds in MPH or KPH).
-    - `0` - Number of hard braking events in the seventh speed bucket, which is greater than D (D is a configurable speed in MPH or KPH).
+    - `189` - Time in seconds driven in the first deceleration bucket, which is zero MPH/s or KPH/s.
+    - `400` - Time driven in the second deceleration bucket, which is 1-A (A is a configurable speed in MPH/s or KPH/s).
+    - `237` - Time driven in the third deceleration bucket, which is A-B (A and B are a configurable speeds in MPH/s or KPH/s).
+    - `15` - Time driven in the fourth deceleration bucket, which is B-C (B and C are a configurable speeds in MPH/s or KPH/s).
+    - `3` - Time driven in the fifth deceleration bucket, which is C-D (C and D are a configurable speeds in MPH/s or KPH/s).
+    - `0` - Time driven in the seventh deceleration bucket, which is greater than D (D is a configurable speed in MPH/s or KPH/s).
   - type: `SpeedDecelerationHistogram` (enum[string]) - Indicates a type for this object.
 
 #### Example
@@ -885,11 +870,11 @@ device configuration when using data from this event type.
       "type": "ObdSpeedEvent",
       "obdSpeedEventData": {
         "data": [
-            0,
-            2,
-            1,
-            0,
-            0,
+            189,
+            400,
+            237,
+            15,
+            3,
             0
         ],
         "type": "SpeedDecelerationHistogram"
