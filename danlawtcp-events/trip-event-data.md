@@ -785,7 +785,7 @@ An idling event is generated if the vehicle's speed is less than or equal to the
 ### <a name="speed-acceleration-histogram"></a> Speed Acceleration Histogram
 
 This `obdSpeedEventData` type describes the time driven for a configurable set of acceleration ranges (in miles per hour per second or
-kilometers per hour second based on device configuration).
+kilometers per hour per second based on device configuration).
 
 There are up to 20 configurable acceleration buckets (excluding the first and last, which are predefined).
 
@@ -836,7 +836,7 @@ device configuration when using data from this event type.
 ### <a name="speed-deceleration-histogram"></a> Speed Deceleration Histogram
 
 This `obdSpeedEventData` type describes the time driven for a configurable set of deceleration ranges (in miles per hour per second or
-kilometers per hour second based on device configuration).
+kilometers per hour per second based on device configuration).
 
 There are up to 20 configurable deceleration buckets (excluding the first and last, which are predefined).
 
