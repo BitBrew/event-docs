@@ -71,7 +71,7 @@ Describes the condition of the Malfunction Indicator Lamp and related vehicle di
 - MilStatus: (object)
   - commandedOn: `true` (boolean) - Whether the malfunction indicator lamp was commanded to turn on by the vehicle.
     - Members:
-      - `true` - Indicates that the lamp was commanded to turn on by on by one of the vehicle's computers.
+      - `true` - Indicates that the lamp was commanded to turn on by one of the vehicle's computers.
       - `false` - Probably indicates that a lamp is on because of a faulty wire in the dashboard.
   - numCodes: `2` (number) - Total number of current diagnostic trouble codes, not just the code(s) triggering the MIL.
   - statusSupported: (object) - Describes the presence of vehicle system monitoring, and the vehicle's support for reporting on its systems' statuses. Similar to the supported PID list, but aggregated by vehicle system.
@@ -1743,7 +1743,6 @@ After a few days of driving, the device will reassign its X, Y, and Z axes to be
 ```json
 {
   "GpsReading": {
-    "gps": {
       "heading": 132,
       "horizontalDilutionOfPrecision": 0,
       "latitude": 42.28004455566406,
@@ -1751,7 +1750,6 @@ After a few days of driving, the device will reassign its X, Y, and Z axes to be
       "numberOfSatellites": 7,
       "hemisphere": "NorthWest",
       "fixQuality": "Standard"
-    }
   }
 }
 ```
