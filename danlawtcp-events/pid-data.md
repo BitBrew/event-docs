@@ -106,7 +106,7 @@ Describes the condition of the Malfunction Indicator Lamp and related vehicle di
     "commandedOn": true,
     "numCodes": 2,
     "statusSupported": {
-      "comprehensiveMonitoringStatus": "true" 
+      "comprehensiveMonitoringStatus": "true", 
       "fuelSystemMonitoringStatus": "true",
       "misfireMonitoringStatus": "true",
       "comprehensiveMonitoringSupported": "false",
