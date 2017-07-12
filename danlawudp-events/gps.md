@@ -14,7 +14,7 @@ The device uses GPS and GLONASS to provide its location at configurable periodic
           - `Distance`
           - `TripStart`
           - `TripEnd`
-          - `KeyOff`
+          - `KeyOff` - See [Heartbeat Event](../heartbeat.md)
           - `FirstGPSFixInTrip`
           - `EMTK` 
           - `TowingStart`
