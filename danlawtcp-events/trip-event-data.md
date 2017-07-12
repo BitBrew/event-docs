@@ -18,7 +18,7 @@ This event represents 1 second of Accelerometer samples. The number of samples p
     - `16` - Negative X-Axis event
     - `32` - Negative Y-Axis event
     - `64` - Negative Z-Axis event
-    - `128` - Y Histogram data
+    - `128` - Y histogram data
     - `136` - Z histogram data
 - eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
   - (object)
