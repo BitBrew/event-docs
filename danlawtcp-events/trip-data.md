@@ -64,14 +64,14 @@ readings at  configurable intervals or triggers.
                 "system2Status": {
                     "closedLoopO2SensorFault": true,
                     "openLoopSystemFault": false,
-                    "openLoopDrivingConditions": true
+                    "openLoopDrivingConditions": true,
                     "openLoopNotYetSatisfied": false,
                     "closedLoopO2SensorFuelControl": false,
 
                 },
                 "system1Status": {
                     "openLoopSystemFault": true,
-                    "openLoopDrivingConditions": false
+                    "openLoopDrivingConditions": false,
                     "closedLoopO2SensorFault": false,
                     "closedLoopO2SensorFuelControl": false,
                     "openLoopNotYetSatisfied": false,
