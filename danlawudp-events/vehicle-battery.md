@@ -8,22 +8,22 @@
     - type: `OBDPidAndVehicleBatteryEvent` (string) - Indicates a type for this event.
     - value: `5.538384437561035` (number) - Voltage of the battery in volts.
     - eventCount: `1` (number) - The number of times this event occurred during the trip.
-  - eventType: (object) - Contains the data for the event.
-    - type: `BatteryEvent` (string) - Indicates a more specific type for this event.
-    - data: `CriticalBatteryWarning`(enum[string]) - Further information about the battery event.
-      - Members:
-        - `ReturnToNormalVoltage`
-        - `LowBatteryInfo`
-        - `LowBatteryWarning`
-        - `CriticalBatteryWarning`
-        - `LowChargingSystemConcernSet`
-        - `HighChargingSystemConcernSet`
-        - `LowChargingSystemConcernReset`
-        - `HighChargingSystemConcernReset`
-        - `ExcessiveDrainAlertSet`
-        - `ExcessiveDrainAlertTripStartReset`
-        - `ExcessiveDrainAlertReset`
-        - `Unknown`
+    - eventType: (object) - Contains the data for the event.
+      - type: `BatteryEvent` (string) - Indicates a more specific type for this event.
+      - data: `CriticalBatteryWarning`(enum[string]) - Further information about the battery event.
+        - Members:
+          - `ReturnToNormalVoltage`
+          - `LowBatteryInfo`
+          - `LowBatteryWarning`
+          - `CriticalBatteryWarning`
+          - `LowChargingSystemConcernSet`
+          - `HighChargingSystemConcernSet`
+          - `LowChargingSystemConcernReset`
+          - `HighChargingSystemConcernReset`
+          - `ExcessiveDrainAlertSet`
+          - `ExcessiveDrainAlertTripStartReset`
+          - `ExcessiveDrainAlertReset`
+          - `Unknown`
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2016-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `IgnitionOff`(enum[string]) - Indicates a contextual type for this event.
