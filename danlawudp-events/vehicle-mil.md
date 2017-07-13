@@ -56,7 +56,7 @@
   "body": {
     "footer": 112,
     "message": {
-      "type": "VehicleMILInfo"
+      "type": "VehicleMILInfo",
       "milStatus": true,
       "milDistance": 1000,
       "milTime": 1000,
