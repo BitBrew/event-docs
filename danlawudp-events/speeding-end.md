@@ -28,8 +28,8 @@ This event provides summarization of a high or critical speeding event after the
         - `Trip`
         - `Idling`
         - `Unknown`
-    - tripNumber: `91`- A sequential number that increases after each trip. Resets after 65,536 trips.
-    - messageType: `22` (number) - 
+    - tripNumber: `327`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - messageType: `3` (number) - A unique number that correlates to the type field in the body of the message.
     - messageLength: `24` (number) - Indicates the total bytes of the message, including the checksum.
     - latitude: `42.06966781616211` (number)
     - longitude: `-86.4334945678711` (number)
