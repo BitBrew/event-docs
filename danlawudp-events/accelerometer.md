@@ -16,31 +16,35 @@ needed to verify the impact event are all configurable.
 
 ## Attributes
 - body: (object)
-  - footer: `227` - Contains a checksum for the message contents.
+  - footer: `59` - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `AccelerometerEvent` (string) - Indicates a type for this event.
-    - eventType: `ImpactEvent` (enum[string]) - The type of accelerometer event.
+    - eventType: `HardTurn` (enum[string]) - The type of accelerometer event.
       - Members
         - `ImpactEvent` - An impact event was generated because the impact criteria were met.
         - `HardAccl` - A hard acceleration event was generated because the configured event criteria were met.
         - `HardBraking`- A hard braking event was generated because the configured event criteria were met.
         - `HardTurn` - A hard turn event was generated because the configured event criteria were met.
         - `Unknown` - The platform is unable to determine the accelerometer event type.
-    - triggerValue: `2000` (number) - The value that triggered this event in mG.
-    - maxValue: `4000` (number) - The maximum value reached for this event in mG.
+    - accelerometerAxis: `Y-Axis` (enum[string])- The normalized axis that the event occurred on.
+      - Members
+        - `X-Axis` - Hard accelerations and braking take place on the X axis.
+        - `Y-Axis` - Hard left and right turns take place on the Y axis.
+    - triggerValue: `7` (number) - The value that triggered this event in mG.
+    - maxValue: `8` (number) - The maximum value reached for this event in mG.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-02-05T10:36:31-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
       - Members
+        - `Idling`
         - `IgnitionOff`
         - `Trip`
-        - `Idling`
         - `Unknown`
-    - tripNumber: `23`- A sequential number that increases after each trip. Resets after 65,536 trips.
-    - messageType: `10` (number) - 
+    - tripNumber: `448`- A sequential number that increases after each trip. Resets after 65,536 trips.
+    - messageType: `43` (number) - 
     - messageLength: `6` (number) - Indicates the total bytes of the message, including the checksum.
-    - latitude: `42.27866889` (number)
-    - longitude: `-83.74376147` (number)
+    - latitude: `42.47831726074219` (number)
+    - longitude: `-83.45187377929688` (number)
     - fixQuality: `FixOk` (enum[string]) - The validity and accuracy of the GPS data.
       - Members
         - `FixOk` - 2D or 3D fix. Latitude and longitude are valid.
@@ -66,28 +70,28 @@ needed to verify the impact event are all configurable.
 
 ```json
 {
-  "header": {...},
-  "body": {
-    "footer": 227,
-    "message": {
-      "type": "AccelerometerEvent",
-      "eventType": "ImpactEvent",
-      "triggerValue": 2000,
-      "maxValue": 4000
-    },
-    "header": {
-      "timestamp": "2017-02-05T10:36:31-05:00",
-      "tripType": "Trip",
-      "tripNumber": 23,
-      "messageType": 10,
-      "messageLength": 6,
-      "latitude": 42.27866889,
-      "longitude": -83.74376147,
-      "fixQuality": "FixOk",
-      "vehicleProtocolId": "ISO15765_11_BIT_CAN",
-      "odo": 22
-    },
-    "isError": false
-  }
+    "header": {...},
+    "body": {
+        "footer": 59,
+        "message": {
+            "type": "AccelerometerEvent",
+            "eventType": "HardTurn",
+            "accelerometerAxis": "Y-axis",
+            "triggerValue": 7,
+            "maxValue": 8
+        },
+        "header": {
+            "timestamp": "2017-07-18T15:36:07-04:00",
+            "tripType": "Trip",
+            "tripNumber": 448,
+            "messageType": 43,
+            "messageLength": 6
+            "latitude": 42.47831726074219,
+            "longitude": -83.45187377929688,
+            "fixQuality": "FixOk",
+            "vehicleProtocolId": "ISO15765_11_BIT_CAN",
+            "odo": 9271
+        }
+    }
 }
 ```
