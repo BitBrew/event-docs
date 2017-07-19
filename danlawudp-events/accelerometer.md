@@ -85,7 +85,7 @@ needed to verify the impact event are all configurable.
             "tripType": "Trip",
             "tripNumber": 448,
             "messageType": 43,
-            "messageLength": 6
+            "messageLength": 6,
             "latitude": 42.47831726074219,
             "longitude": -83.45187377929688,
             "fixQuality": "FixOk",
