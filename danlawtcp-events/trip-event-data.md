@@ -1086,7 +1086,7 @@ Battery metrics during the trip.
         "engineTimeToStart": 42,
         "averageInTripVoltage": 12.199999809265137,
         "minimumBatteryVoltage": 12,
-        "restingVoltage": 12
+        "restingVoltage": 12,
         "type": "BatteryMetricsPerTrip"
           }
         }
