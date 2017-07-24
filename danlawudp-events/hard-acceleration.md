@@ -1,5 +1,5 @@
 # Hard Acceleration
-An acceleration event is generated if the vehicle's acceleration and speed are greater than or equal to the device's configured thresholds.
+An acceleration event is generated if the vehicle's acceleration and speed are greater than or equal to the device's configured thresholds. This event can be multiple seconds long.
 
 ## Attributes
 - body (object)
@@ -8,7 +8,7 @@ An acceleration event is generated if the vehicle's acceleration and speed are g
     - type: `HardAccelerationMessage` (string) - Indicates a type for this event.
     - initialSpeed: `6` (number) - Vehicle speed at the beginning of the acceleration event in KPH.
     - finalSpeed: `22` (number) - Vehicle speed at the end of the acceleration event in KPH.
-    - maxAcceleration: `16` (number) - Maximum acceleration reached during the event in KPH/s.
+    - maxAcceleration: `11` (number) - Maximum acceleration reached during the event in KPH/s.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-11-18T16:14:34-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
@@ -54,7 +54,7 @@ An acceleration event is generated if the vehicle's acceleration and speed are g
       "type": "HardAccelerationMessage",
       "initialSpeed": 6,
       "finalSpeed": 22,
-      "maxAcceleration": 16
+      "maxAcceleration": 11
     },
     "header": {
       "timeStamp": "2017-11-18T16:14:34-05:00",
