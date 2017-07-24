@@ -1,5 +1,5 @@
 # Hard Brake
-A hard braking event is generated if the vehicle's deceleration and speed are greater than or equal to the device's configured thresholds.
+A hard braking event is generated if the vehicle's deceleration and speed are greater than or equal to the device's configured thresholds. Data in this event can be collected over multiple seconds.
 
 ## Attributes
 
