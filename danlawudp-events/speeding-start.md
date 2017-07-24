@@ -7,11 +7,11 @@ This event provides notification of a high or critical speeding event after the 
   - footer: `253` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
     - type: `OverSpeedingMessage` (string) - Indicates a type for this event.
-    - overSpeedType: `HighSpeed` (enum[string]) - A more specific category for this event.
+    - overSpeedType: `Unknown` (enum[string]) - A more specific category for this event.
       - Members
         - `HighSpeed`
         - `CriticalSpeed`
-        - `Unknown`
+        - `Unknown` - The platform cannot distinguish between `HighSpeed` and `CriticalSpeed` at the start of the event.
     - startTime: `2017-06-26T02:20:20Z` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event began.
     - initialLatitude: `42.04869079589844`(number)
     - initialLongitude: `-86.49169921875` (number)
@@ -62,7 +62,7 @@ This event provides notification of a high or critical speeding event after the 
         "footer": 253,
         "message": {
             "type": "OverSpeedingMessage",
-            "overSpeedType": "HighSpeed",
+            "overSpeedType": "Unknown",
             "startTime": "2017-06-26T02:20:20Z",
             "initialLatitude": 42.04869079589844,
             "initialLongitude": -86.49169921875,
