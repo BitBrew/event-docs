@@ -4,7 +4,7 @@ Accelerometers measure acceleration in meters per second squared
 (m/s<sup>2</sup>) or G-forces (g). A single G-force unit is equal to 9.8
 m/s<sup>2</sup>. A g is equal to 1000mG.
 
-Acceleromeeter events are generated using 24Hz accelerometer sampling with
+Accelerometer events are generated using 24Hz accelerometer sampling with
 sensitivity up to 2g. The threshold for triggering the event and the minimum
 number of samples needed to verify the event are configurable. The number of
 milliseconds the threshold must be maintained is static (1000 milliseconds).
