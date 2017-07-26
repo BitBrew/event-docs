@@ -1,6 +1,6 @@
 # Vehicle DTCs - Current
 
-This event is generated whenver a MIL status or DTC count changes and a current DTC exists in the vehicle. The device can be configured to check for DTCs once per trip or at periodic intervals.
+This event is generated whenever a MIL status or DTC count changes and a current DTC exists in the vehicle. The device can be configured to check for DTCs once per trip or at periodic intervals.
 
 ## Attributes
 
