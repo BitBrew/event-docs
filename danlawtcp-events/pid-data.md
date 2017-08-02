@@ -1139,7 +1139,7 @@ Values for this field range from 0 to 65.535.
 
 ### Attributes
 
-- ControlModuleVoltage: `12` - The voltage arriving at the control module in Volts.
+- ControlModuleVoltage: `12` (number) - The voltage arriving at the control module in Volts.
 
 ### Example
 
@@ -1240,7 +1240,7 @@ There are 3 PIDs that provide absolute throttle position.
 
 ### Attributes
 
-- AbsoluteThrottlePositionB: `35` - Openness of the throttle as a percentage of WOT.
+- AbsoluteThrottlePositionB: `35` (number) - Openness of the throttle as a percentage of WOT.
 
 ### Example
 
@@ -1324,7 +1324,7 @@ Values for this field range from 0 to 65,535 minutes (approx. 1092 hours).
 
 ### Attributes
 
-- TimeSinceTroubleCodesCleared: `200` - Time traveled in minutes.
+- TimeSinceTroubleCodesCleared: `200` (number) - Time traveled in minutes.
 
 ### Example
 
