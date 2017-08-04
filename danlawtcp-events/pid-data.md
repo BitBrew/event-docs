@@ -1754,7 +1754,7 @@ After a few days of driving, the device will reassign its X, Y, and Z axes to be
 }
 ```
 
-## <a name="fuel-level-input-smoothed"></a> (PID 47) Fuel Level Input Smoothed
+## <a name="fuel-level-input-smoothed"></a> (PID 251) Fuel Level Input Smoothed
 
 The fill of the fuel tank as a percentage, after a smoothing algorithm has been applied. This parameter does not reflect the actual quantity of gas in the tank. Fuel level is important because certain vehicle systems can only run diagnostic checks when the tank is between 15 and 85 percent full. 
 
