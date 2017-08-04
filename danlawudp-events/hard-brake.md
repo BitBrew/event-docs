@@ -9,7 +9,7 @@ A hard braking event is generated if the vehicle's deceleration and speed are gr
     - type: `HardBrakeMessage` (string) - Indicates a type for this event.
     - initialSpeed: `52` (number) - Vehicle speed at the beginning of the braking event in KPH.
     - finalSpeed: `21` (number) - Vehicle speed at the end of the brakin event in KPH.
-    - maxAcceleration: `16` (number) - Maximum braking reached during the event in KPH/s.
+    - maxBraking: `16` (number) - Maximum braking reached during the event in KPH/s.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-11-18T16:14:34-05:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Trip`(enum[string]) - Indicates a contextual type for this event.
