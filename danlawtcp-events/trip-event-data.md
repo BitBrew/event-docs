@@ -2,29 +2,74 @@
 
 ## <a name="accelerometer"></a> AccelerometerEvent
 
-This event represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the `eventData` array varies.
+This event represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the `accelerometerSamples` array varies.
 
 ### Attributes
 
 - type: `AccelerometerEvent` (string) - The specific type of event.
-- relativeSecond: `1` (number) - The relative time from the previous event in seconds.
-- eventType: `1` (enum[number]) - Indicates the condition that triggered this event.
-  - Members
-    - `0` - AT histogram data
-    - `1` - Positive X-Axis event
-    - `2` - Positive Y-Axis event
-    - `4` - Positive Z-Axis event
-    - `8` - X histogram data
-    - `16` - Negative X-Axis event
-    - `32` - Negative Y-Axis event
-    - `64` - Negative Z-Axis event
-    - `128` - Y histogram data
-    - `136` - Z histogram data
-- eventData: (array) - Accelerometer data for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
+- secondsRelativeToTrigger: `5` (number) - The relative time from the trigger in seconds.
+- accelerometerData: (object) - An object that contains the data and metadata for this event.
+  - type: `Triggered` (enum[string]) - One of two possible subtypes for this event.
+    - Members: 
+      - `Triggered` - A configured threshold value was exceeded, triggering this event.
+      - `Histogram` - A configured setting was met, triggering this event.
+      - `Unknown` - An unknown accelerometer event type was received and cannot be decoded.
+  - triggeredAxis: `positive-x-axis` (enum[string]) - One of six possible
+    - Members:
+      - `positive-x-axis`
+      - `negative-x-axis`
+      - `positive-y-axis`
+      - `negative-y-axis`
+      - `positive-z-axis`
+      - `negative-z-axis`
+  - accelerometerSamples: (array[objects]) - Accelerometer readings for this event. The length of the array is equal to the number of samples the device is configured to collect per second (Hz). 24 Hz is the maximum.
   - (object)
-    - x: `1` (number) - The X-axis reading
-    - y: `0` (number) - The Y-axis reading
-    - z: `0` (number) - The Z-axis reading
+    - x: `-16` (number) - The X-axis reading in mG.
+    - y: `-31` (number) - The Y-axis reading in mG.
+    - z: `10000` (number) - The Z-axis reading in mG.
+
+### Example
+
+```
+{
+    "header": {...},
+    "body": {
+        "type": "TripEventRelativeTime",
+        "timestamp": "2017-08-01T08:31:07-04:00",
+        "tripNumber": 49,
+        "eventData": {
+            "type": "AccelerometerEvent",            
+            "secondsRelativeToTrigger": 5,          
+            "accelerometerData": {
+                "type": "Triggered",                
+                "triggeredAxis": "positive-x-axis",
+                "accelerometerSamples": [
+                    {
+                        "x": -16,
+                        "y": -31,
+                        "z": 1000
+                    },
+                    {
+                        "x": 16,
+                        "y": -47,
+                        "z": 1000
+                    },
+                    {
+                        "x": 16,
+                        "y": -47,
+                        "z": 1000
+                    },
+                    {
+                        "x": 16,
+                        "y": -47,
+                        "z": 1000
+                    }
+                ]
+            },
+        }
+    }
+}
+```
 
 ## <a name="bluetooth"></a> BluetoothEvent
 
