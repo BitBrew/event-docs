@@ -64,7 +64,7 @@
       "clrTime": 0,
       "clrDistance": 0,
       "deviceTripTime": 6633,
-      "deviceTripDistance": 8,
+      "deviceTripDistance": 8
     },
     "header": {
       "timestamp": "2017-09-21T17:31:42-05:00",
