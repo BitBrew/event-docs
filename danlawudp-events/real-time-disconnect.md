@@ -60,7 +60,7 @@
       "vehicleLastKnownLoc": 0,
       "vehicleOdoAvailable": false,
       "vehicleOdometer": 0,
-      "calculatedOdometer": 1667,
+      "calculatedOdometer": 1667
     },
     "header": {
       "timestamp": "2017-08-22T16:08:10-04:00",
