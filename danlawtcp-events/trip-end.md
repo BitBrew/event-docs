@@ -4,7 +4,7 @@
 
 ### Attributes
 
-- type: 'TripEndRecordRelativeTime` - (string) - Indicates a type for this event.
+- type: `TripEndRecordRelativeTime` - (string) - Indicates a type for this event.
 - timestamp: `2017-04-27T17:06:36-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
 - tripNumber: `1736` (number) - A sequential number that increases after each trip. Resets after 65,536 trips.
 - odometer: `23` (number) - Device-calculated odometer.
