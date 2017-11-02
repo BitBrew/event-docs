@@ -153,4 +153,4 @@ and appear in any Trip Data event's pidData map.
 - PID 128 [Raw Accelerometer](pid-data.md#raw-accelerometer)
 - PID 129 [Normalized Accelerometer](pid-data.md#normalized-accelerometer)
 - PID 131 [GPS](pid-data.md#gps)
-- PID 251 [GPS](pid-data.md#fuel-level-input-smoothed)
+- PID 251 [Fuel Level Input Smoothed](pid-data.md#fuel-level-input-smoothed)
