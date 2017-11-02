@@ -1643,36 +1643,42 @@ The Datalogger device is programmed with an X, Y and Z axis. Raw accelerometer r
 
 ![Raw device accelerometer orientation](../images/raw-accelerometer.png)
 
+This PID represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the array varies.
+
+### Attributes
+
+- RawAccelerometer: (array[object]) - Accelerometer samples for the vehicle's three axes.
+  - (object)
+    - x: (number) - X-axis reading in mG.
+    - y: (number) - Y-axis reading in mG.
+    - z: (number) - Z-axis reading in mG.
+
 ### Example
 
 ```json
 {
   "RawAccelerometer": [
-    {
-      "offsets": [
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      ],
-      "base": {
-        "x": 229,
-        "y": 5,
-        "z": 54
-      }
-    }
-  ]
+		{
+			"x": -700,
+			"y": -16,
+			"z": -750
+		},
+		{
+			"x": -720,
+			"y": -16,
+			"z": -770
+		},
+		{
+			"x": -700,
+			"y": -16,
+			"z": -770
+		},
+		{
+			"x": -700,
+			"y": -16,
+			"z": -770
+		}
+	]
 }
 ```
 
@@ -1681,6 +1687,17 @@ The Datalogger device is programmed with an X, Y and Z axis. Raw accelerometer r
 After a few days of driving, the device will reassign its X, Y, and Z axes to be in line with the vehicle, regardless of its orientation inside the vehicle.
 
 ![Normalized device accelerometer orientation](../images/normalized-accelerometer.png)
+Normalized accelerometer readings in mG for a stationary vehicle would be x=0, y=0, z=1000.
+
+This PID represents 1 second of Accelerometer samples. The number of samples per second (Hz) is configurable, so the length of the array varies.
+
+### Attributes
+
+- NormalizedAccelerometer: (array[object]) - Accelerometer samples for the vehicle's three axes.
+  - (object)
+    - x: (number) - X-axis reading in mG.
+    - y: (number) - Y-axis reading in mG.
+    - z: (number) - Z-axis reading in mG.
 
 ### Example
 
@@ -1688,31 +1705,27 @@ After a few days of driving, the device will reassign its X, Y, and Z axes to be
 {
   "NormalizedAccelerometer": [
     {
-      "offsets": [
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        }
-      ],
-      "base": {
-        "x": 229,
-        "y": 5,
-        "z": 54
-      }
+      "x": -16,
+      "y": -16,
+      "z": 980
+    },
+    {
+      "x": -16,
+      "y": -16,
+      "z": 970
+    },
+    {
+      "x": -31,
+      "y": -31,
+      "z": 970
+    },
+    {
+      "x": -78,
+      "y": -31,
+      "z": 970
     }
   ]
-}
+}  
 ```
 
 ## <a name="gps"></a> (PID 131) GPS
