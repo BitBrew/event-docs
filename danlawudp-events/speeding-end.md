@@ -6,7 +6,7 @@ This event provides summarization of a high or critical speeding event after the
 - body (object)
   - footer: `253` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
-    - type: `OverSpeedingMessage` (string) - Indicates a type for this event.
+    - type: `OverSpeedingMessageEnd` (string) - Indicates a type for this event.
     - overSpeedType: `HighSpeed` (enum[string]) - A more specific category for this event.
       - Members
         - `HighSpeed`
