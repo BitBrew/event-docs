@@ -6,7 +6,7 @@ This event provides notification of a high or critical speeding event after the 
 - body (object)
   - footer: `253` (number) - Contains a checksum for the message contents.
   - message: (object) - Contains the contents of the event.
-    - type: `OverSpeedingMessage` (string) - Indicates a type for this event.
+    - type: `OverSpeedingMessageStart` (string) - Indicates a type for this event.
     - overSpeedType: `Unknown` (enum[string]) - A more specific category for this event.
       - Members
         - `HighSpeed`
@@ -16,10 +16,6 @@ This event provides notification of a high or critical speeding event after the 
     - initialLatitude: `42.04869079589844`(number)
     - initialLongitude: `-86.49169921875` (number)
     - startODO: `6163` (number) - Vehicle or device odometer reading at the beginning of the event.
-    - duration: `0` (number) - Duration not yet available since the event is still in progress.
-    - distance: `0` (number) - Distance traveled during speeding event in kilometers.
-    - peakSpeed: `0` (number) - The maximum speed reached during this event is not yet available since the event is still in progress.
-    - averageSpeed: `0` (number) - The average speed during this event is not yet available since the event is still in progress.
   - header (object) - UDP-specifc object containing meta-data about the event.
     - timestamp: `2017-06-25T22:22:58-04:00` (string) - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-formatted time stamp showing when the event was produced on the device.
     - tripType: `Unknown` (enum[string]) - Indicates a contextual type for this event.
