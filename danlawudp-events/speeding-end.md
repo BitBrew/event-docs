@@ -61,7 +61,7 @@ This event provides summarization of a high or critical speeding event after the
     "body": {
         "footer": 253,
         "message": {
-            "type": "OverSpeedingMessage",
+            "type": "OverSpeedingMessageEnd",
             "overSpeedType": "HighSpeed",
             "startTime": "2017-06-26T02:20:20Z",
             "initialLatitude": 42.04869079589844,
