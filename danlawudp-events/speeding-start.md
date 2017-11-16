@@ -52,16 +52,11 @@ This event provides notification of a high or critical speeding event after the 
     "body": {
         "footer": 253,
         "message": {
-            "type": "OverSpeedingMessage",
-            "overSpeedType": "Unknown",
+            "type": "OverSpeedingMessageStart",
             "startTime": "2017-06-26T02:20:20Z",
             "initialLatitude": 42.04869079589844,
             "initialLongitude": -86.49169921875,
-            "startODO": 6163,
-            "duration": 0,
-            "distance": 0,
-            "peakSpeed": 0,
-            "averageSpeed": 0
+            "startODO": 6163
         },
         "header": {
             "timestamp": "2017-06-25T22:22:58-04:00",
